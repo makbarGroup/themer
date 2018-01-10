@@ -12,19 +12,15 @@
     "type": "git"
   },
   "license": "MIT",
-  "jest": {
-    "rootDir": "src"
-  },
   "bin": {
     "themer": "./bin/themer.js"
   },
   "scripts": {
-    "build": "babel --out-dir lib src",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "prepare": "npm run lint && npm run build && npm run test"
+    "prepare": "npm run lint && npm run test"
   },
   "dependencies": {
     "chalk": "^2.3.0",
