@@ -7,7 +7,9 @@
     "node": ">=8.11.4"
   },
   "scripts": {
-    "prepublishOnly": "cp ../../../LICENSE.md ./"
+    "prepublishOnly": "cp ../../../LICENSE.md ./",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,10 +32,12 @@
   "dependencies": {
     "color": "^3.0.0",
     "lodash": "^4.17.4",
-    "xml": "^1.0.1"
+    "xml": "^1.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {},
   "peerDependencies": {
     "themer": "^1.0.2||^2||^3"
-  }
+  },
+  "snyk": true
 }
